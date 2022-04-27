@@ -1,23 +1,28 @@
-import logo from './logo.svg';
 import './App.css';
+import HelloWorld from './components/HelloWorld';
+import SayMyName from './components/SayMyName';
+import Pessoa from './components/Pessoa';
 
 function App() {
-  return (
+  const name = 'Lucas'
+
+  function soma (a, b) {
+    return a + b;
+  }
+
+  const url = 'https://via.placeholder.com/150'
+  const nome = 'Jose'
+
+  return (  
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Olá Mundo!</h1>
+      <p>Sr(a): { name }</p>
+      <p>Soma: { soma(2, 3) }</p>
+      <img src={url} alt="Minha Imagem"/>
+      <HelloWorld />
+      <SayMyName name={nome}/>
+      <SayMyName name="Maria"/>
+      <Pessoa nome="Lucas" idade="26" profissao="dev" foto={url}/>
     </div>
   );
 }
