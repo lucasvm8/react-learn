@@ -35,7 +35,7 @@ function Conditional () {
         </div>
       )}
     </div>
-    )
+  )
 }
 
 export default Conditional
